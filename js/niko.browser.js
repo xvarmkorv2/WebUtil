@@ -37,7 +37,7 @@ $(() => {
 			'niko_83c',
 			'niko_owoc',
 			'niko_uwu',
-			'xniko_wx',
+			'niko_xwx',
 			'niko_wink',
 			'niko_winkc',
 			'niko_winkp',
