@@ -82,7 +82,7 @@ $(() => {
 			'WorldM_yawn',
 			'WorldM_eyeclosed',
 			'WorldM_eyeclosed_sigh',
-			//'WorldM_sunglasses',
+			'WorldM_sunglasses',
 			//'WorldM_popcorn',
 			'WorldM_smile',
 			//'WorldM_owo',
