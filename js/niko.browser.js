@@ -93,7 +93,7 @@ $(() => {
 			//'WorldM_wink',
 			//'WorldM_winkc',
 			//'WorldM_winkp',
-			//'WorldM_derp',
+			'WorldM_derp',
 			'WorldM_speak',
 			'WorldM_pancakes',
 			//'WorldM_surprise',
