@@ -114,6 +114,24 @@ $(() => {
 			'WorldM_upset2',
 			//'WorldM_really',
 		],
+		Calamus:[
+			'calamus.png',
+			'calamus_heh.png',
+			'calamus_sad.png',
+			'calamus_shame.png',
+			'calamus_shock.png',
+			'calamus_smile.png',
+			'calamus_smile2.png',
+			'calamus_speak.png',
+		],
+		Alula:[
+			'alula.png',
+			'alula_gasp.png',
+			'alula_gasp2.png',
+			'alula_oh.png',
+			'alula_pout.png',
+			'alula_speak.png',
+		],
 		Other: ['rqst_other_sonicastle'],
 	};
 	const preloadTimers = [];
