@@ -157,6 +157,7 @@ $(() => {
 		],
 		Rue: [
 			"rue",
+			"rue_dark",
 			"rue_oh",
 			"rue_sad",
 			"rue_sigh",
