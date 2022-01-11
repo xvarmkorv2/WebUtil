@@ -45,6 +45,17 @@ function isPrime(test, verbose) {
 	}
 	// This handles all even numbers, because I can't initialise
 	// the lower factor test to an even number or it'll break
+	if (absolute == 2) {
+		return verbose
+			? [
+				true,
+				iters,
+				factor,
+				void 0,
+				absolute,
+			]
+			: true;
+	}
 	if (absolute % 2 == 0) {
 		return verbose
 			? [
