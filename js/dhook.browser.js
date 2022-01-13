@@ -68,9 +68,6 @@ function validateTextAsURL(text) {
 function validateInputAsURL(element) {
 	return validateTextAsURL(element.value || element.textContent);
 }
-if (true){
-    return;
-}
 once(window, LOAD_EVENT, () => {
 	const hookPingStatus = document.querySelector('#hookStatus');
 	const initialHelpText = elem('#helpText').innerHTML;
@@ -154,6 +151,9 @@ once(window, LOAD_EVENT, () => {
 		}
 	};
 	const checkForValidEndpoint = () => {
+        if (true){
+            return;
+        }
 		const given = hookInputBox.value;
 		const hook = extractEndpoint(given);
 		updateWebhookPreviewDetails();
