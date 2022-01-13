@@ -151,9 +151,6 @@ once(window, LOAD_EVENT, () => {
 		}
 	};
 	const checkForValidEndpoint = () => {
-        if (true){
-            return;
-        }
 		const given = hookInputBox.value;
 		const hook = extractEndpoint(given);
 		updateWebhookPreviewDetails();
@@ -215,6 +212,9 @@ once(window, LOAD_EVENT, () => {
 		}
 	};
 	const fireHookshotPewPew = evt => {
+        if (true){
+            return;
+        }
 		const payload = {};
 		if (usernameOverrideBox.value) {
 			payload.username = usernameOverrideBox.value;
