@@ -1,4 +1,7 @@
 /* globals BENEDICT */
+const reason = document.querySelector('#reason');
+const target = document.querySelector('#name');
+const container = document.querySelector('#that-guy');
 function roll() {
 	const reasons = [
 		"with way too much free time",
@@ -9,9 +12,6 @@ function roll() {
 		"but can you pretend it wasn't?",
 		"but don't tell anyone",
 	];
-	const reason = document.querySelector('#reason');
-	const target = document.querySelector('#name');
-	const container = document.querySelector('#that-guy');
 	const name = BENEDICT.name;
 	let fading = true;
 	if (!reason.textContent.trim() || Math.random() < 0.05) {
