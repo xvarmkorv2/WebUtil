@@ -2,7 +2,7 @@
 	font-family: 'TerminusTTF';
 	src: url('terminus.ttf');
 }
-body, #interface, .sidebar {
+body, input {
 	background-color: black;
 	border-color: silver;
 	color: silver;
