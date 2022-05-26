@@ -2,15 +2,16 @@
 	font-family: 'TerminusTTF';
 	src: url('terminus.ttf');
 }
-
+body {
+	background-color: black;
+	border-color: silver;
+	color: silver;
+}
 #interface {
 	display: block;
 	width: 60%;
 	min-width: 600px;
 	margin: 2vh auto;
-	background-color: black;
-	border-color: silver;
-	color: silver;
 }
 #render {
 	display: block;
