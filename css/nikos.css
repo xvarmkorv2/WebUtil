@@ -3,9 +3,9 @@
 	src: url('terminus.ttf');
 }
 body, input {
-	background-color: black;
-	border-color: silver;
-	color: silver;
+	background-color: rgb(65, 65, 65) !important;
+	border-color: silver !important;
+	color: silver !important;
 }
 #interface {
 	display: block;
