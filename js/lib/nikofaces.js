@@ -205,5 +205,8 @@ const FACES = {
         'kip_wink',
         'kip_worry',
     ],
-    Other: ['rqst_other_sonicastle'],
+    Other: [
+		'rqst_other_sonicastle',
+		'rqst_other_fnfxtf2',
+	],
 };
