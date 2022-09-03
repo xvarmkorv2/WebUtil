@@ -122,9 +122,6 @@ const FACES = {
         'alula_pout',
         'alula_speak',
     ],
-	Shepard: [
-		"shepard"
-	],
     Maize: [
 		'maize',
 		'maize_smile1',
@@ -132,12 +129,6 @@ const FACES = {
 		'maize_strain',
 		'maize_stress',
 		'maize_thisisfine',
-	],
-    Kelvin: [
-		'kelvin',
-	],
-    Mason: [
-		'mason',
 	],
     RowBot: [
 		'rowbot',
@@ -276,6 +267,15 @@ const FACES = {
     ],
     ClockDude: [
 		'watcher',
+	],
+    Kelvin: [
+		'kelvin',
+	],
+    Mason: [
+		'mason',
+	],
+	Shepherd: [
+		"shepherd"
 	],
     Other: [
 		'rqst_other_sonicastle',
