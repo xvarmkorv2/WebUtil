@@ -124,7 +124,7 @@ const FACES = {
     ],
 	Shepard: [
 		"shepard"
-	]
+	],
     Maize: [
 		'maize',
 		'maize_smile1',
