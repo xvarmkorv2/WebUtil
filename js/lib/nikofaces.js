@@ -122,6 +122,47 @@ const FACES = {
         'alula_pout',
         'alula_speak',
     ],
+	Shepard: [
+		"shepard"
+	]
+    Maize: [
+		'maize',
+		'maize_smile1',
+		'maize_smile2',
+		'maize_strain',
+		'maize_stress',
+		'maize_thisisfine',
+	],
+    Kelvin: [
+		'kelvin',
+	],
+    Mason: [
+		'mason',
+	],
+    RowBot: [
+		'rowbot',
+		'rowbot_off',
+	],
+    GateKeepers: [
+		'blue_gatekeeper',
+		'green_gatekeeper',
+		'red_gatekeeper',
+	],
+    Silver: [
+        "silver",
+        "silver2",
+        "silver3",
+        "silver_eyeclosed",
+        "silver_falling",
+        "silver_GETOUT",
+        "silver_lookup",
+        "silver_rip",
+        "silver_rip0",
+        "silver_rip2",
+        "silver_square1",
+        "silver_square2",
+        "silver_worry",
+    ],
     Prototype: [
         'proto1',
         'proto1b',
@@ -153,21 +194,6 @@ const FACES = {
         "rue_smile",
         "rue_talk",
         "rue_ttt",
-    ],
-    Silver: [
-        "silver",
-        "silver2",
-        "silver3",
-        "silver_eyeclosed",
-        "silver_falling",
-        "silver_GETOUT",
-        "silver_lookup",
-        "silver_rip",
-        "silver_rip0",
-        "silver_rip2",
-        "silver_square1",
-        "silver_square2",
-        "silver_worry",
     ],
     LampLighter: [
         'plight',
@@ -205,8 +231,15 @@ const FACES = {
         'kip_wink',
         'kip_worry',
     ],
+    ClockDude: [
+		'watcher',
+	],
     Other: [
 		'rqst_other_sonicastle',
 		'rqst_other_fnfxtf2',
+		"af",
+		"average_redditor",
+		"john-athan_AHHA",
+		"missing",
 	],
 };
