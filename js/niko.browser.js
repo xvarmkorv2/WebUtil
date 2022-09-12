@@ -163,16 +163,21 @@ $(() => {
 		const header = $('<div class="face-header"></div>');
 		const faceList = $('<div class="face-list"></div>');
 		header.text(title);
-		for (const filename, files of filenames) {
-			if (Array.is(files)) {
-				const newHeader, newFaceList = CreateHeader(filename, files, faceList);
-				faceList.append(newHeader, newFaceList);
-			} else {
+		if (Object.is(filenames)) {
+			for (const headername, files of filenames) {
+				if (Array.is(files)) {
+					const newHeader, newFaceList = CreateHeader(filename, files, faceList);
+					faceList.append(newHeader, newFaceList);
+				}
+			}
+		} else if (Array.is(filenames)) {
+			for (const filename of filenames) {
 				const clazz = `face ${filename.replace(/[^\w-]+/gu, '-')}`;
 				const face = $(`<img class="${clazz}" src="img/expressions/${filename}.png" />`);
 				faceList.append(face);
 			}
 		}
+		
 		header.on('click', () => {
 			const metalist = parent
 				.children('.face-list');
