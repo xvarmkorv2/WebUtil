@@ -170,12 +170,16 @@ $(() => {
 				faceList.append(face);
 			}
 		} else {
-			for (const [
+			try {
+				for (const [
 					headername, 
 					files,
 			] of Object.entries(filenames)) {
 				const newHeader, newFaceList = CreateHeader(headername, files, faceList);
 				faceList.append(newHeader, newFaceList);
+			}
+			} catch {
+				
 			}
 		}
 		
