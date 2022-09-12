@@ -1,4 +1,9 @@
 const FACES = {
+    Test: {
+        Test: [
+            'niko_normal'
+        ]
+    },
     Niko: [
         'niko_normal',
         'niko2',
