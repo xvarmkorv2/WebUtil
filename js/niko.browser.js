@@ -159,22 +159,21 @@ $(() => {
 		console.groupEnd();
 	};
 	const faceListContainer = $('#faces');
-	for (const [
-		title,
-		filenames,
-	] of Object.entries(FACES)) {
+	const CreateHeader = (title, filenames, parent) => {
 		const header = $('<div class="face-header"></div>');
 		const faceList = $('<div class="face-list"></div>');
 		header.text(title);
 		for (const filename of filenames) {
-			const clazz = `face ${filename.replace(/[^\w-]+/gu, '-')}`;
-			const face = $(`<img class="${clazz}" src="img/expressions/${filename}.png" />`);
-			faceList.append(face);
+			if (String.is(filename)) {
+				const clazz = `face ${filename.replace(/[^\w-]+/gu, '-')}`;
+				const face = $(`<img class="${clazz}" src="img/expressions/${filename}.png" />`);
+				faceList.append(face);
+			} 
 		}
 		header.on('click', () => {
-			const metalist = faceListContainer
+			const metalist = parent
 				.children('.face-list');
-			const headerlist = faceListContainer
+			const headerlist = parent
 				.children('.face-header');
 			if (faceList.is(':visible')) {
 				metalist
@@ -192,7 +191,14 @@ $(() => {
 				faceList.show();
 				header.removeClass('collapsed');
 			}
+			return header
 		});
+	};
+	for (const [
+		title,
+		filenames,
+	] of Object.entries(FACES)) {
+		const header = CreateHeader(title, filenames, faceListContainer)
 		faceListContainer.append(header, faceList);
 	}
 	draw.font = '20pt TerminusTTF'; // Loaded off the css/ directory, in case you don't have it natively
