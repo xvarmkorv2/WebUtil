@@ -9,8 +9,7 @@ $(() => {
 		'#render': "This is the fully-rendered image, built off the canvas from the composite elements. You can save it or copy to use now.",
 	});
 	/* eslint-enable max-len */
-	
-	const preloadTimers = [];
+	let preloadInterval
 	const initialHelpText = $('#helpText').html();
 	let unhelpTimer = false;
 	const setHelpText = function(text) {
@@ -137,8 +136,9 @@ $(() => {
 			image.style.display = 'block';
 			canvas.style.display = 'none';
 			if (oldData == image.src) { // no change
-				for (const timer of preloadTimers) {
-					clearTimeout(timer);
+				if (preloadInterval) {
+					clearInterval(preloadInterval);
+					preloadInterval = null;
 				}
 			}
 		}
@@ -212,8 +212,9 @@ $(() => {
 	const boing = () => {
 		message.removeEventListener('input', boing);
 		message.addEventListener('input', refreshRender);
-		for (const timer of preloadTimers) {
-			clearTimeout(timer);
+		if (preloadInterval){
+			clearInterval(preloadInterval);
+			preloadInterval = null;
 		}
 		console.log("haha trampoline function wrapper go boing");
 		refreshRender();
@@ -230,9 +231,7 @@ $(() => {
 				console.log(`Found face ${parts[1]}`);
 				face.id = 'selected';
 				message.value = decodeURIComponent(parts[2]);
-				for (let i = 100; i <= 1000; i += 100) {
-					preloadTimers.push(setTimeout(refreshRender, i));
-				}
+				preloadInterval = setInterval(refreshRender, 100)
 			}
 			else {
 				console.error(`Can't find face ${parts[1]}`);
