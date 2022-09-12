@@ -159,9 +159,10 @@ $(() => {
 		console.groupEnd();
 	};
 	const faceListContainer = $('#faces');
-	const CreateHeader = (title, filenames, parent) => {
-		const header = $('<div class="face-header"></div>');
-		const faceList = $('<div class="face-list"></div>');
+	const CreateHeader = (title, filenames, parent, layer) => {
+		layer = layer || 1
+		const header = $(`<div class="face-header layer${layer}"></div>`);
+		const faceList = $(`<div class="face-list layer${layer}"></div>`);
 		header.text(title);
 		if (Array.isArray(filenames)) {
 			for (const filename of filenames) {
@@ -170,13 +171,12 @@ $(() => {
 				faceList.append(face);
 			}
 		} else {
-			//for (const [
-			//		headername, 
-			//		files,
-			//] of Object.entries(filenames)) {
-			//	const newHeader, newFaceList = CreateHeader(headername, files, faceList);
-			//	faceList.append(newHeader, newFaceList);
-			//}
+			for (const [
+					headername, 
+					files,
+			] of Object.entries(filenames)) {
+				CreateHeader(headername, files, faceList, layer + 1);
+			}
 		}
 		
 		header.on('click', () => {
@@ -201,20 +201,19 @@ $(() => {
 				header.removeClass('collapsed');
 			}
 		});
-		return header, faceList
+		parent.append(header, faceList);
 	};
 	for (const [
 		title,
 		filenames,
 	] of Object.entries(FACES)) {
-		const header, faceList = CreateHeader(title, filenames, faceListContainer)
-		faceListContainer.append(header, faceList);
+		CreateHeader(title, filenames, faceListContainer)
 	}
 	draw.font = '20pt TerminusTTF'; // Loaded off the css/ directory, in case you don't have it natively
 	draw.textBaseline = 'top';
 	draw.fillStyle = '#ffffff';
 	faceListContainer
-		.children('.face-header')
+		.find('.face-header')
 		.not(':first()')
 		.click();
 	faceListContainer

@@ -62,24 +62,31 @@ label, span.label {
 .header {
 	margin-top: 1em;
 }
-
-#faces > .face-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-#faces > .face-header {
-	font-weight: bold;
+.layer1 {
 	margin-left: 1.6em;
+}
+
+.layer2 {
+	margin-left: 2em;
+}
+
+.face-list {
+	/*display: flex;
+	flex-wrap: wrap;
+	justify-content: center; 
+	margin: auto;*/
+}
+.face-header {
+	font-weight: bold;
 	cursor: pointer;
 	font-size: 1.1em;
 }
-#faces > .face-header:not(.collapsed)::before {
+.face-header:not(.collapsed)::before {
 	content: "▼";
 	cursor: pointer;
 	font-size: 1.1em;
 }
-#faces > .face-header.collapsed::before {
+.face-header.collapsed::before {
 	content: "▶";
 	cursor: pointer;
 	font-size: 1.1em;
