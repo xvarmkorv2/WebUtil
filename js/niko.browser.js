@@ -159,7 +159,7 @@ $(() => {
 		console.groupEnd();
 	};
 	const faceListContainer = $('#faces');
-	const CreateHeader = (title, filenames, parent) => {
+	const CreateHeader = function(title, filenames, parent) {
 		const header = $('<div class="face-header"></div>');
 		const faceList = $('<div class="face-list"></div>');
 		header.text(title);
