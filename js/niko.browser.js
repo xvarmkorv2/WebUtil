@@ -168,10 +168,8 @@ $(() => {
 					headername, 
 					files,
 			] of Object.entries(filenames)) {
-				if (Array.is(files)) {
-					const newHeader, newFaceList = CreateHeader(headername, files, faceList);
-					faceList.append(newHeader, newFaceList);
-				}
+				const newHeader, newFaceList = CreateHeader(headername, files, faceList);
+				faceList.append(newHeader, newFaceList);
 			}
 		} else if (Array.is(filenames)) {
 			for (const filename of filenames) {
