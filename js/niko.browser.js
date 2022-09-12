@@ -164,9 +164,12 @@ $(() => {
 		const faceList = $('<div class="face-list"></div>');
 		header.text(title);
 		if (Object.is(filenames)) {
-			for (const headername, files of filenames) {
+			for (const [
+					headername, 
+					files,
+			] of Object.entries(filenames)) {
 				if (Array.is(files)) {
-					const newHeader, newFaceList = CreateHeader(filename, files, faceList);
+					const newHeader, newFaceList = CreateHeader(headername, files, faceList);
 					faceList.append(newHeader, newFaceList);
 				}
 			}
