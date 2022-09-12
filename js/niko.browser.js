@@ -162,6 +162,7 @@ $(() => {
 	const CreateHeader = function(title, filenames, parent) {
 		const header = $('<div class="face-header"></div>');
 		const faceList = $('<div class="face-list"></div>');
+		faceListContainer.append(header, faceList);
 		header.text(title);
 		if (Array.isArray(filenames)) {
 			for (const filename of filenames) {
