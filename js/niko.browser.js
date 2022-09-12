@@ -163,24 +163,20 @@ $(() => {
 		const header = $('<div class="face-header"></div>');
 		const faceList = $('<div class="face-list"></div>');
 		header.text(title);
-		try {
-			if (Array.isArray(filenames)) {
-				for (const filename of filenames) {
-					const clazz = `face ${filename.replace(/[^\w-]+/gu, '-')}`;
-					const face = $(`<img class="${clazz}" src="img/expressions/${filename}.png" />`);
-					faceList.append(face);
-				}
-			} else {
-				for (const [
-						headername, 
-						files,
-				] of Object.entries(filenames)) {
-					const newHeader, newFaceList = CreateHeader(headername, files, faceList);
-					faceList.append(newHeader, newFaceList);
-				}
+		if (Array.isArray(filenames)) {
+			for (const filename of filenames) {
+				const clazz = `face ${filename.replace(/[^\w-]+/gu, '-')}`;
+				const face = $(`<img class="${clazz}" src="img/expressions/${filename}.png" />`);
+				faceList.append(face);
 			}
-		} catch {
-
+		} else {
+			//for (const [
+			//		headername, 
+			//		files,
+			//] of Object.entries(filenames)) {
+			//	const newHeader, newFaceList = CreateHeader(headername, files, faceList);
+			//	faceList.append(newHeader, newFaceList);
+			//}
 		}
 		
 		header.on('click', () => {
