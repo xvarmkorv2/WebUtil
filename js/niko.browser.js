@@ -194,8 +194,8 @@ $(() => {
 				faceList.show();
 				header.removeClass('collapsed');
 			}
-			return header, faceList
 		});
+		return header, faceList
 	};
 	for (const [
 		title,
