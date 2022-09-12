@@ -163,12 +163,15 @@ $(() => {
 		const header = $('<div class="face-header"></div>');
 		const faceList = $('<div class="face-list"></div>');
 		header.text(title);
-		for (const filename of filenames) {
-			if (String.is(filename)) {
+		for (const filename, files of filenames) {
+			if (!files) {
 				const clazz = `face ${filename.replace(/[^\w-]+/gu, '-')}`;
 				const face = $(`<img class="${clazz}" src="img/expressions/${filename}.png" />`);
 				faceList.append(face);
-			} 
+			} else if (files) {
+				const header = CreateHeader(filename, files, faceList);
+				faceList.append(face);
+			}
 		}
 		header.on('click', () => {
 			const metalist = parent
@@ -191,14 +194,14 @@ $(() => {
 				faceList.show();
 				header.removeClass('collapsed');
 			}
-			return header
+			return header, faceList
 		});
 	};
 	for (const [
 		title,
 		filenames,
 	] of Object.entries(FACES)) {
-		const header = CreateHeader(title, filenames, faceListContainer)
+		const header, faceList = CreateHeader(title, filenames, faceListContainer)
 		faceListContainer.append(header, faceList);
 	}
 	draw.font = '20pt TerminusTTF'; // Loaded off the css/ directory, in case you don't have it natively
