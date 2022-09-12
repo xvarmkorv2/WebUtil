@@ -169,8 +169,8 @@ $(() => {
 				const face = $(`<img class="${clazz}" src="img/expressions/${filename}.png" />`);
 				faceList.append(face);
 			} else if (files) {
-				const newHeader, newFaceList = CreateHeader(filename, files, faceList);
-				faceList.append(newHeader, newFaceList);
+				//const newHeader, newFaceList = CreateHeader(filename, files, faceList);
+				//faceList.append(newHeader, newFaceList);
 			}
 		}
 		header.on('click', () => {
