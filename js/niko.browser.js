@@ -214,7 +214,8 @@ $(() => {
 	draw.fillStyle = '#ffffff';
 	faceListContainer
 		.find('.face-header')
-		.not(':first()')
+		//.not(':first()')
+		.first()
 		.click();
 	faceListContainer
 		.find('img')
