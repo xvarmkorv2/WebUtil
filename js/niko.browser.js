@@ -170,7 +170,7 @@ $(() => {
 				const face = $(`<img class="${clazz}" src="img/expressions/${filename}.png" />`);
 				faceList.append(face);
 			}
-		} else {
+		} else if (typeof filenames === 'object') {
 			for (const [
 					headername, 
 					files,
@@ -214,8 +214,8 @@ $(() => {
 	draw.fillStyle = '#ffffff';
 	faceListContainer
 		.find('.face-header')
-		//.not(':first()')
-		.first()
+		.not(':first()')
+		//.first()
 		.click();
 	faceListContainer
 		.find('img')
