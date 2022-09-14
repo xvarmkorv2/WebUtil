@@ -130,20 +130,6 @@ const FACES = {
 		'maize_stress',
 		'maize_thisisfine',
 	],
-	Robots: {
-		RowBot: [
-			'rowbot',
-			'rowbot_off',
-		],
-		GateKeepers: [
-			'blue_gatekeeper',
-			'green_gatekeeper',
-			'red_gatekeeper',
-		],
-		Kelvin: [
-			'kelvin',
-		],
-	},
 	George: {
 		"1": [
 			'george1',
@@ -273,6 +259,20 @@ const FACES = {
 		'kip_worry',
 	],
 	Misc: {
+		Robots: {
+			RowBot: [
+				'rowbot',
+				'rowbot_off',
+			],
+			GateKeepers: [
+				'blue_gatekeeper',
+				'green_gatekeeper',
+				'red_gatekeeper',
+			],
+			Kelvin: [
+				'kelvin',
+			],
+		},
 		ClockDude: [
 			'watcher',
 		],
