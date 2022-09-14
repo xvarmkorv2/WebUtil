@@ -145,34 +145,34 @@ const FACES = {
 		],
 	},
 	George: {
-		George1: [
+		"1": [
 			'george1',
 			'george1_hm',
 			'george1_smile',
 			'george1_smug',
 		],
-		George2: [
+		"2": [
 			'george2',
 			'george2_grr',
 			'george2_NO',
 			'george2_sigh',
 			'george2_stress',
 		],
-		George3: [
+		"3": [
 			'george3',
 			'george3_cry',
 			'george3_sad',
 			'george3_sigh',
 			'george3_worry',
 		],
-		George4: [
+		"4": [
 			'george4',
 			'george4_golly',
 			'george4_omg',
 			'george4_oops',
 			'george4_smile',
 		],
-		George5: [
+		"5": [
 			'george5',
 			'george5_aww',
 			'george5_heh',
@@ -181,7 +181,7 @@ const FACES = {
 			'george5_sigh',
 			'george5_smile',
 		],
-		George6: [
+		"6": [
 			'george6',
 			'george6_fingerguns',
 			'george6_point',
@@ -272,21 +272,23 @@ const FACES = {
 		'kip_wink',
 		'kip_worry',
 	],
-	ClockDude: [
-		'watcher',
-	],
-	Mason: [
-		'mason',
-	],
-	Shepherd: [
-		"shepherd"
-	],
-	Other: [
-		'rqst_other_sonicastle',
-		'rqst_other_fnfxtf2',
-		"af",
-		"average_redditor",
-		"john-athan_AHHA",
-		"missing",
-	],
+	Misc: {
+		ClockDude: [
+			'watcher',
+		],
+		Mason: [
+			'mason',
+		],
+		Shepherd: [
+			"shepherd"
+		],
+		Other: [
+			'rqst_other_sonicastle',
+			'rqst_other_fnfxtf2',
+			"af",
+			"average_redditor",
+			"john-athan_AHHA",
+			"missing",
+		],
+	}
 };
