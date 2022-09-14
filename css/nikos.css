@@ -63,20 +63,22 @@ label, span.label {
 	margin-top: 1em;
 }
 .layer1 {
-	margin-left: 1.6em;
+	margin-left: 1.6em !important;
 }
 
 .layer2 {
-	margin-left: 2em;
+	margin-left: 2em !important;
 }
 
-.face-list {
+/*.face-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center; 
-}
+}*/
+
 .face-header {
 	font-weight: bold;
+	margin-left: 1.6em;
 	cursor: pointer;
 	font-size: 1.1em;
 }
