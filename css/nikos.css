@@ -71,10 +71,9 @@ label, span.label {
 }
 
 .face-list {
-	/*display: flex;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: center; 
-	margin: auto;*/
 }
 .face-header {
 	font-weight: bold;
