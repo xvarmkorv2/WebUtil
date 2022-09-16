@@ -2,36 +2,36 @@
 	{
 		"title": "What's That One Actor's Name?",
 		"desc": "reminds you what Bendersnoot Baggageclaim's name is in case you forgot",
-		"url": "/benedict.html"
+		"url": "/benedict"
 	},
 	{
 		"title": "Random Cape Generator",
 		"desc": "a Worm-style random parahuman power generator",
-		"url": "/cape.html"
+		"url": "/cape"
 	},
 	{
 		"title": "FontBox",
 		"desc": "a page to turn normal text into specially-fonted text",
-		"url": "/fontbox.html"
+		"url": "/fontbox"
 	},
 	{
 		"title": "NikoMaker - Niko died for our suns",
 		"desc": "a point, click, and type creator for dialogue boxes featuring Niko, from the game Oneshot",
-		"url": "/niko.html"
+		"url": "/niko"
 	},
 	{
 		"title": "rEdit",
 		"desc": "an easy way to sort and deduplicate subreddits for creating a multireddit list",
-		"url": "/r-edit.html"
+		"url": "/r-edit"
 	},
 	{
 		"title": "TextMunge",
 		"desc": "a general-purpose text-processing framework page, for writing your own JS functionality with prebuilt text inputs",
-		"url": "/textmunge.html"
+		"url": "/textmunge"
 	},
 	{
 		"title": "Welcome Back, Listeners",
 		"desc": "provides a nice Welcome To Night Vale quote, chosen at random",
-		"url": "/wtnv.html"
+		"url": "/wtnv"
 	}
 ]
