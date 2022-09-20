@@ -12,13 +12,13 @@ $(() => {
 	let preloadInterval
 	const initialHelpText = $('#helpText').html();
 	let unhelpTimer = false;
-	const setHelpText = function(text) {
+	const setHelpText = text => {
 		if (typeof unhelpTimer != 'boolean') {
 			clearTimeout(unhelpTimer);
 		}
 		$('#helpText').html(text || initialHelpText);
 	};
-	const startClearHelpTimer = function() {
+	const startClearHelpTimer = () => {
 		unhelpTimer = setTimeout(setHelpText, 500);
 	};
 	const help = (selector, text) => $(selector).hover(
